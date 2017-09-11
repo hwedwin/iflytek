@@ -1,0 +1,38 @@
+{
+	"flag": true,
+	"msg": "接口调用成功",
+	"result": {
+		"total": 44,
+		"data": [{
+			"id": "100015880001",
+			"unit": "数据中心",
+			"operator": "孙老一",
+			"phoneNumber": "2003",
+			"email": "12345678@iflytek.com"
+		},{
+			"id": "100015880002",
+			"unit": "数据中心",
+			"operator": "孙老二",
+			"phoneNumber": "2003",
+			"email": "12345678@iflytek.com"
+		},{
+			"id": "100015880003",
+			"unit": "数据中心",
+			"operator": "孙老三",
+			"phoneNumber": "2003",
+			"email": "12345678@iflytek.com"
+		},{
+			"id": "100015880004",
+			"unit": "数据中心",
+			"operator": "孙老四",
+			"phoneNumber": "2003",
+			"email": "12345678@iflytek.com"
+		},{
+			"id": "100015880005",
+			"unit": "数据中心",
+			"operator": "孙老五",
+			"phoneNumber": "2003",
+			"email": "12345678@iflytek.com"
+		}]
+	}
+}

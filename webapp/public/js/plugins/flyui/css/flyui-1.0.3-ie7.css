@@ -1,0 +1,90 @@
+/*! flyui v1.0.3 | by huanzhang & ueteam | (c) 2016 iFlytek, Inc. | Licensed under MIT | 2016-09-20 09:09:53 CST */
+.row-ie {
+  position: relative;
+  overflow: hidden;
+}
+.col-inner {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.row-ie .col-xs-1, .row-ie .col-xs-2, .row-ie .col-xs-3, .row-ie .col-xs-4, .row-ie .col-xs-5, .row-ie .col-xs-6, .row-ie .col-xs-7, .row-ie .col-xs-8, .row-ie .col-xs-9, .row-ie .col-xs-10, .row-ie .col-xs-11, .row-ie .col-xs-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.list {
+  _overflow: hidden;
+}
+.popup .list .item {
+  _background-image: url(../img/blank.gif);
+}
+.icon {
+  _background-image: url(../img/icon.gif);
+}
+/* 表单控件 */
+.widget .input {
+  *position: absolute;
+  *top: 0;
+  *left: 0;
+  *height: 20px;
+}
+.widget .select i {
+  *position: absolute;
+  *top: 50%;
+  *left: 50%;
+  *margin: -8px 0 0 -8px;
+}
+.textbox-wrap,
+.dropdown-wrap,
+.datepicker-wrap {
+  *height: 28px;
+}
+.form-sm .textbox-wrap,
+.form-control-sm .textbox-wrap,
+.form-sm .dropdown-wrap,
+.form-control-sm .dropdown-wrap,
+.form-sm .datepicker-wrap,
+.form-control-sm .datepicker-wrap {
+  *height: 22px;
+}
+.form-lg .textbox-wrap,
+.form-control-lg .textbox-wrap,
+.form-lg .dropdown-wrap,
+.form-control-lg .dropdown-wrap,
+.form-lg .datepicker-wrap,
+.form-control-lg .datepicker-wrap {
+  *height: 32px;
+}
+.form-control .label {
+  *display: block;
+  *top: 50%;
+  *left: 10px;
+  *margin-top: 1px;
+  _margin-top: 0;
+  *height: auto;
+}
+.form-control .label label {
+  *position: relative;
+  *top: -50%;
+  *vertical-align: baseline;
+}
+.form-sm .widget .input,
+.form-control-sm .widget .input {
+  *height: 16px;
+}
+.form-lg .widget .input,
+.form-control-lg .widget .input {
+  *height: 22px;
+}
+/* 翻页 */
+.pagination .number a.prev,
+.pagination .number a.next {
+  _color: #333;
+}
+.pagination .number span.ellipsis {
+  _background-image: url(../img/icon.png);
+}
+/* 表格 */
+.grid {
+  _border-top: none;
+  _border-bottom: none;
+}

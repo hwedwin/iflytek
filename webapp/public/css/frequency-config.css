@@ -1,0 +1,66 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.router-title {
+	width: 140px;
+}
+
+.content {
+	padding: 25px;
+}
+
+.content-title {
+	display: block;
+	padding-left: 10px;
+	border-left: 6px solid #0BB7C5;
+}
+
+.btnwrap {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.btnwrap input {
+	margin: 0 30px;
+	width: 100px;
+	height: 30px;
+	border-radius: 3px;
+}
+
+.save-btn {
+	border: 1px solid #0DD2C9;
+	background-color: #EAFEF8;
+	color: #0DD2C9;
+}
+
+.cancel-btn {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	color: #666;
+}
+
+.sm-input {
+	margin: 0 3px;
+	padding: 3px;
+	width: 50px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+.inputWrap label {
+	font-size: 14px;
+}
+
+.numbe-range input {
+	padding: 3px;
+	width: 80%;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: 15px;
+}
+
+.numbe-range span {
+	font-size: 14px;
+}

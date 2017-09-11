@@ -1,0 +1,76 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.page-content-wrap {
+    overflow-y: scroll;
+}
+
+.endTime {
+	padding-left: 15px;
+}
+
+.endTime-label label {
+	text-align: left;
+}
+
+.tableWrap {
+	margin: 20px 25px;
+}
+
+.btnWrap .search-btn,
+.btnWrap .add-btn{
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	background-color: #28C4A4;
+	color: #fff;
+}
+
+.table-head th {
+	background-color: #fff;
+}
+
+.table-head + thead th {
+	background-color: #F4F5F9;
+}
+
+.table-head .result-label {
+	padding-left: 20px;
+	text-align: left;
+}
+
+.table-head .btnWrap {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.tableWrap .control {
+	padding: 0 15px;
+}
+
+.grid-table .col-3 {
+	width: 3%;
+}
+
+.grid-table .col-5 {
+	width: 5%;
+}
+
+.grid-table .col-8 {
+	width: 8%;
+}
+
+.grid-table .col-10 {
+	width: 10%;
+}
+
+.grid-table .col-12 {
+	width: 12%;
+}
+
+.grid-table .col-15 {
+	width: 15%;
+}

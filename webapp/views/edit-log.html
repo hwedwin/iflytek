@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>日志信息</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/edit-log.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/edit-log.js"></script>
+	</head>
+	<body>
+		<div class="page-content-wrap">
+			<div class="title">日志信息</div>
+			<form id="formWrap" class="formWrap">
+				<div class="clearfix">
+					<div class="col-xs-5">
+						<div class="form-control">
+							<span class="label">
+								<label>业务系统:</label>
+							</span>
+							<input  class="system" name="system"
+									data-role="dropdownlist"
+									data-bind="source: system,value: item.businessSystem, enabled: editable"
+									type="text" />
+						</div>
+					</div>
+					<div class="col-xs-5">
+						<div class="form-control">
+							<span class="label">
+								<label>操作时间:</label>
+							</span>
+							<input  id="startTime" class="startTime" name="startTime"
+									data-role="datepicker"
+									data-format="yyyy-MM-dd HH:mm:ss"
+									data-bind="value: item.operateTime, enabled: editable"
+									type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col-xs-5">
+						<div class="form-control">
+							<span class="label">
+								<label>操作人:</label>
+							</span>
+							<input  class="operator" name="operateUserName"
+									data-role="textbox"
+									data-bind="value: item.operateUserName, enabled: editable"
+									type="text"/>
+						</div>
+					</div>
+					<div class="col-xs-5">
+						<div class="form-control">
+							<span class="label">
+								<label>终端标识:</label>
+							</span>
+							<input  class="identification" name="identification"
+									data-role="textbox"
+									data-bind="value: item.terminalIdentity, enabled: editable"
+									type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col-xs-5">
+						<div class="form-control">
+							<span class="label">
+								<label>功能模块:</label>
+							</span>
+							<input  id="functionModule" class="function-module" name="function-module"
+									data-role="textbox"
+									data-bind="value: item.functionModule, enabled: editable"
+									type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="form-control btnWrap">
+					<input class="sure-btn" data-bind="click: sureClick" type="button" value="确定">
+				</div>
+			</form>
+		</div>
+	</body>

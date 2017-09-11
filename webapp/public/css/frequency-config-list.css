@@ -1,0 +1,30 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.page-content-wrap {
+    overflow-y: scroll;
+}
+
+.tableWrap {
+	margin: 20px auto;
+	width: 96%;
+}
+
+.table-head {
+	text-align: left;
+}
+
+.table-head th {
+	padding-left: 20px;
+	background-color: #fff;
+}
+
+.table-head + thead th {
+	background-color: #F4F5F9;
+}
+
+.router-title {
+	width: 150px;
+}

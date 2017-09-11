@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>登录</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<base target="iframe-content">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/login.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/login.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<section id="content">
+				<form id="formWrap" action="">
+					<h1>Login Form</h1>
+					<div>
+						<input id="userName" name="userName" data-bind="value: userName" type="text" placeholder="请输入用户名" required=""/>
+					</div>
+					<div>
+						<input id="password" name="password" data-bind="value: password" type="password" placeholder="请输入用户密码" required=""/>
+					</div>
+					<div>
+						<input data-bind="click: login" type="button" value="登录" />
+						<a href="javascript:void(null)" data-bind="click: goRegister">Register</a>
+					</div>
+				</form>
+			</section>
+		</div>
+	</body>

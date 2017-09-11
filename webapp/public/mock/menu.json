@@ -1,0 +1,76 @@
+{
+	"flag": "true",
+	"msg": "接口调用成功",
+	"result": [{
+		"value": "javascript:void(null)",
+		"text": "预警信息",
+		"categories": [{
+			"text": "名单预警",
+			"value": "/views/list-warn.html"
+		}, {
+			"text": "异常地址预警",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "访问频率预警",
+			"value": "javascript:void(null)"
+		}]
+	},{
+		"value": "javascript:void(null)",
+		"text": "频率管理",
+		"categories": [{
+			"text": "访问频率管理配置",
+			"value": "/views/frequency-config.html"
+		}, {
+			"text": "访问频率管理列表",
+			"value": "/views/frequency-config-list.html"
+		}]
+	},{
+		"value": "javascript:void(null)",
+		"text": "日志管理",
+		"categories": [{
+			"text": "登录日志",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "查询日志",
+			"value": "/views/query-logs.html"
+		}, {
+			"text": "添加日志",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "修改日志",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "删除日志",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "导出日志",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "接口服务日志",
+			"value": "javascript:void(null)"
+		}]
+	}, {
+		"value": "javascript:void(null)",
+		"text": "信息查询",
+		"categories": [{
+			"text": "结果搜索",
+			"value": "/views/search-results.html"
+		}]
+	},{
+		"value": "javascript:void(null)",
+		"text": "模型管理",
+		"categories": [{
+			"text": "名单预警模型列表",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "名单预警模型配置",
+			"value": "javascript:void(null)"
+		}, {
+			"text": "频繁操作模型列表",
+			"value": "/views/module-list.html"
+		}, {
+			"text": "频繁操作模型配置",
+			"value": "/views/module-config.html"
+		}]
+	}]
+}

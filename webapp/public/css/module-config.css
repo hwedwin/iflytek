@@ -1,0 +1,70 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.router-title {
+	width: 140px;
+}
+
+.page-content-wrap {
+    overflow-y: scroll;
+}
+
+.content-title {
+	display: block;
+	padding-left: 10px;
+	border-left: 6px solid #0BB7C5;
+}
+
+.tableWrap {
+	margin-top: 20px;
+}
+
+.saveWrap {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.save-btn {
+	display: inline-block;
+	margin-right: 50px;
+	padding: 0 14px;
+	width: 100px;
+	height: 30px;
+	border: 1px solid #83f1cc;
+	border-radius: 2px;
+	background-color: #EAFEF8;
+	font-size: 15px;
+	color: #85d894;
+}
+
+.grid-table .delete {
+	color: #FF9D48;
+}
+
+.tableWrap .col-5 {
+	width: 5%;
+}
+
+.table-head th {
+	background-color: #fff;
+}
+
+.table-head + thead th {
+	background-color: #F4F5F9;
+}
+
+.tableWrap {
+	margin: 20px 20px 0;
+}
+
+.table-head .table-title {
+	padding-left: 20px;
+	text-align: left;
+}
+
+.table-head .btnWrap {
+	padding-right: 20px;
+	text-align: right;
+}

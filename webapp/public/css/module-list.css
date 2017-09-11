@@ -1,0 +1,79 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.page-content-wrap {
+    overflow-y: scroll;
+}
+
+.router-title {
+	width: 150px;
+}
+
+.formWrap {
+	margin-top: 15px;
+}
+
+.table-head th {
+	background-color: #fff;
+}
+
+.table-head + thead th {
+	background-color: #F4F5F9;
+}
+
+.tableWrap {
+	margin: 20px 20px 0;
+}
+
+.endTime {
+	padding-left: 20px;
+}
+.endTime .label {
+	width: 10px;
+}
+
+.endTime .label label {
+	padding-left: 10px;
+	text-align: left;
+}
+
+.table-head .table-title {
+	padding-left: 20px;
+	text-align: left;
+}
+
+.table-head .btnWrap {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.btnWrap .search-btn,
+.btnWrap .add-btn {
+	margin: 0 10px;
+	width: 80px;
+	height: 30px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.btnWrap .search-btn {
+	background-color: #28C4A4;
+}
+
+.btnWrap .add-btn {
+	background-color: #299EE3;
+}
+
+.delete-btn {
+	width: 60px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #FF9D48;
+}

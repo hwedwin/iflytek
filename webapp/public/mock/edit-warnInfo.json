@@ -1,0 +1,15 @@
+{
+	"flag": true,
+	"msg": "接口调用成功!",
+	"result": {
+		"exception": "10",
+		"id": "100015820001",
+		"operator": "孙老一",
+		"optionId": "1002",
+		"optionType":"查询",
+		"system":"数据中心",
+		"systemId":"2003",
+		"theme":"人员查询情况监测1",
+		"time":"2017-01-26 18-16-15"
+	}
+}

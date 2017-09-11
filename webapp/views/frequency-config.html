@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>访问频率管理配置</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/frequency-config.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/frequency-config.js"></script>
+	</head>
+	<body>
+		<div class="page-content-wrap">
+			<nav class="router">
+				<span class="router-title">访问频率管理配置</span>
+			</nav>
+			<div class="content">
+				<span class="content-title">主要内容</span>
+				<form id="formWrap" class="formWrap">
+					<div class="clearfix">
+						<div class="col-xs-8">
+							<div class="form-control">
+								<span class="label">
+									<label><i class="required">*</i>主题:</label>
+								</span>
+								<input  class="theme" name="theme"
+										data-role="textbox"
+										data-bind="value: theme"
+										type="text"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>业务系统:</label>
+								</span>
+								<input  class="business-system" name="businessSystem"
+										data-role="dropdownlist"
+										data-bind="source: system"
+										data-index="0"
+										type="text"/>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>操作类型:</label>
+								</span>
+								<input  id="optionType" class="option-type" name="optionType"
+										data-role="dropdownlist"
+										data-bind="source: optionType"
+										data-index="0"
+										type="text"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label><i class="required">*</i>数据范围:</label>
+								</span>
+								<div class="numbe-range">
+									<input name="dataRange" type="text" placeholder="numbe >= 20">
+									<span>以后</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label>统计周期:</label>
+								</span>
+								<div class="siglesel-wrap" data-role="siglesel"
+									data-bind="source: periods, value: sigleselVal">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-10">
+							<div class="form-control">
+								<span class="label">
+									<label>统计阈值:</label>
+								</span>
+								<div class="inputWrap">
+									<div class="input-item col-xs-5">
+										<input id="lastPeroid" name="thresholdRecord" type="radio" checked="checked">
+										<label for="lastPeroid">达到上一统计周期的正负<input class="sm-input" name="lastPeroid" type="number">%</label>
+									</div>
+									<div class="input-item col-xs-5">
+										<input id="maxRecord" name="thresholdRecord" type="radio">
+										<label for="maxRecord">达到统计记录次数上限<input class="sm-input" name="maxRecord" type="number">次</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-8">
+							<div class="form-control">
+								<span class="label">
+									<label>备注:</label>
+								</span>
+								<textarea name="remark" value="" placeholder="这是备注信息"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="btnwrap">
+							<input class="save-btn" data-bind="click: saveClick" type="button" value="保存">
+							<input class="cancel-btn" data-bind="click: cancelClick" type="button" value="取消">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>

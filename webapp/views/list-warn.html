@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>名单预警</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/list-warn.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/list-warn.js"></script>
+	</head>
+	<body>
+		<div class="page-content-wrap">
+			<nav class="router">
+				<span class="router-title">名单预警</span>
+			</nav>
+			<div class="content">
+				<form id="formWrap" class="formWrap">
+					<div class="clearfix">
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>主题:</label>
+								</span>
+								<input  class="theme" name="theme"
+										data-role="textbox"
+										type="text" placeholder="输入主题"/>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>操作人:</label>
+								</span>
+								<input  id="operator" class="operator" name="createUserName"
+										data-role="textbox"
+										type="text" placeholder="输入操作人名"/>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>业务系统:</label>
+								</span>
+								<input  class="businessSystem" name="businessSystemValue"
+										data-role="dropdownlist"
+										data-selectable="multiple"
+										data-bind="source: system"
+										data-option-label="请选择"
+										type="text"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>预警时间:</label>
+								</span>
+								<input  id="startTime" class="startTime" name="startTime"
+										data-role="datepicker"
+										data-format="yyyy-MM-dd HH:mm:ss"
+										data-max-date="#endTime"
+										type="text"/>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="form-control endTime">
+								<span class="label">
+									<label>~</label>
+								</span>
+								<input  id="endTime" class="endTime" name="endTime"
+										data-role="datepicker"
+										data-format="yyyy-MM-dd HH:mm:ss"
+										data-min-date="#startTime"
+										type="text"/>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="form-control">
+								<span class="label">
+									<label>操作类型:</label>
+								</span>
+								<input  id="optionType" class="optionType" name="optionTypeValue"
+										data-role="dropdownlist"
+										data-selectable="multiple"
+										data-bind="source: optionType"
+										data-option-label="请选择"
+										type="text"/>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="col-xs-12 searchWrap">
+							<input class="search-btn" data-bind="click: searchClick" type="button" value="查询">
+						</div>
+					</div>
+				</form>
+
+				<div class="grid tableWrap">
+					<table class="grid-table" cellspacing="0">
+						<thead class="table-head">
+			    			<th colspan="4">符合条件的名单预警列表</th>
+			    			<th class="btnWrap" colspan="5">
+			    				<input class="delete-btn" data-bind="click: deleteWarnInfo" type="button" value="- 删除">
+			    				<input class="add-btn" data-bind="click: addWarnInfo" type="button" value="+ 新增">
+			    			</th>
+			    		</thead>
+			    		<thead>
+			    			<th class="tb-checkbox col-4">
+			    				<input id="selectAll" data-bind="events: {click: selectAll}, checked: allSelected" type="checkbox">
+			    			</th>
+			    			<th class="col-15">预警编号</th>
+			    			<th class="col-15">主题</th>
+			    			<th class="col-15">预警时间</th>
+			    			<th class="col-8">业务系统</th>
+			    			<th class="col-8">操作类型</th>
+			    			<th class="col-8">异常情况</th>
+			    			<th class="col-8">操作人</th>
+			    			<th class="col-8">操作</th>
+			    		</thead>
+			    		<tbody id="gridList" data-bind="source: tableData" data-template="gridTemp">
+			    			<tr>
+			    				<td colspan="9">正在加载中...</td>
+			    			</tr>
+			    		</tbody>
+			    	</table>
+			    	<div    class="pagination"
+			    			data-role="pagination"
+				    		data-num-display-entries="2"
+				    		data-num-edge-entries="2"
+				    		data-bind="source: tableData"></div>
+				</div>
+			</div>
+		</div>
+		<script id="gridTemp" type="text/html">
+		    {{each $data as item index}}
+		    	<tr>
+		    		<td><input class="row-check" type="checkbox" data-bind="events: {click: selectItem},checked: checked"></td>
+		    		<td data-bind="text: warnNum"></td>
+		    		<td data-bind="text: theme"></td>
+		    		<td>{{item.warnTime | formatDate:'yyyy-MM-dd hh:mm:ss'}}</td>
+		    		<td data-bind="text: businessSystemValue"></td>
+		    		<td data-bind="text: optionTypeValue"></td>
+		    		<td data-bind="text: exceptionValue"></td>
+		    		<td data-bind="text: createUserName"></td>
+		    		<td>
+		    			<input class="edit-btn" data-bind="click: eaditClick" type="button" value="编辑">
+		    		</td>
+		    	</tr>
+		    {{/each}}
+		</script>
+	</body>

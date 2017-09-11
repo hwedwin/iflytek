@@ -1,0 +1,88 @@
+{
+	"flag": true,
+	"msg": "接口调用成功",
+	"result": {
+		"total": 101,
+		"data": [{
+			"id": "100015870001",
+			"theme": "频繁查询人口数据",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"time": "2017-01-26 18:16:15",
+			"remindWays": [{
+				"value": "4001",
+				"text": "短信"
+			},{
+				"value": "4002",
+				"text": "首页提醒"
+			}],
+			"warnResult": "1"
+		},{
+			"id": "100015870002",
+			"theme": "频繁查询人口数据",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"time": "2017-01-26 18:16:15",
+			"remindWays": [{
+				"value": "4001",
+				"text": "短信"
+			},{
+				"value": "4002",
+				"text": "首页提醒"
+			}],
+			"warnResult": "1"
+		},{
+			"id": "100015870003",
+			"theme": "频繁查询人口数据",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"time": "2017-01-26 18:16:15",
+			"remindWays": [{
+				"value": "4001",
+				"text": "短信"
+			},{
+				"value": "4002",
+				"text": "首页提醒"
+			}],
+			"warnResult": "1"
+		},{
+			"id": "100015870004",
+			"theme": "频繁查询人口数据",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"time": "2017-01-26 18:16:15",
+			"remindWays": [{
+				"value": "4001",
+				"text": "短信"
+			},{
+				"value": "4002",
+				"text": "首页提醒"
+			}],
+			"warnResult": "1"
+		},{
+			"id": "100015870005",
+			"theme": "频繁查询人口数据",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"time": "2017-01-26 18:16:15",
+			"remindWays": [{
+				"value": "4001",
+				"text": "短信"
+			},{
+				"value": "4002",
+				"text": "首页提醒"
+			}],
+			"warnResult": "1"
+		}]
+	}
+}

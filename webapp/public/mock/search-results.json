@@ -1,0 +1,63 @@
+{
+	"flag": true,
+	"msg": "接口调用成功",
+	"result": {
+		"total": 106,
+		"data": [{
+			"id": "100015860001",
+			"optionCondition": "330123198001010107,张泉灵",
+			"operator": "张强",
+			"identify": "002551",
+			"operatorUnit": "人社局",
+			"time": "2017-01-26 18-16-15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002"
+		},{
+			"id": "100015860002",
+			"optionCondition": "330123198001010107,张泉灵",
+			"operator": "张强",
+			"identify": "002552",
+			"operatorUnit": "人社局",
+			"time": "2017-01-26 18-16-15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002"
+		},{
+			"id": "100015860003",
+			"optionCondition": "330123198001010107,张泉灵",
+			"operator": "张强",
+			"identify": "002553",
+			"operatorUnit": "人社局",
+			"time": "2017-01-26 18-16-15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002"
+		},{
+			"id": "100015860004",
+			"optionCondition": "330123198001010107,张泉灵",
+			"operator": "张强",
+			"identify": "002554",
+			"operatorUnit": "人社局",
+			"time": "2017-01-26 18-16-15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002"
+		},{
+			"id": "100015860005",
+			"optionCondition": "330123198001010107,张泉灵",
+			"operator": "张强",
+			"identify": "002555",
+			"operatorUnit": "人社局",
+			"time": "2017-01-26 18-16-15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002"
+		}]
+	}
+}

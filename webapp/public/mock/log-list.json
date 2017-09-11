@@ -1,0 +1,53 @@
+{
+	"flag": true,
+	"msg": "接口调用成功",
+	"result": {
+		"total": 69,
+		"data": [{
+			"id": "100015850001",
+			"system": "数据中心",
+			"systemId": "2003",
+			"module": "查询模块",
+			"operator": "孙老一",
+			"identification": "10.125.1.121",
+			"time": "2017-01-26 18:16:15",
+			"condition": "330123198001010107"
+		},{
+			"id": "100015850002",
+			"system": "数据中心",
+			"systemId": "2003",
+			"module": "查询模块",
+			"operator": "孙老二",
+			"identification": "10.125.1.121",
+			"time": "2017-01-26 18:16:15",
+			"condition": "330123198001010107"
+		},{
+			"id": "100015850003",
+			"system": "数据中心",
+			"systemId": "2003",
+			"module": "查询模块",
+			"operator": "孙老三",
+			"identification": "10.125.1.121",
+			"time": "2017-01-26 18:16:15",
+			"condition": "330123198001010107"
+		},{
+			"id": "100015850004",
+			"system": "数据中心",
+			"systemId": "2003",
+			"module": "查询模块",
+			"operator": "孙老四",
+			"identification": "10.125.1.121",
+			"time": "2017-01-26 18:16:15",
+			"condition": "330123198001010107"
+		},{
+			"id": "100015850005",
+			"system": "数据中心",
+			"systemId": "2003",
+			"module": "查询模块",
+			"operator": "孙老五",
+			"identification": "10.125.1.121",
+			"time": "2017-01-26 18:16:15",
+			"condition": "330123198001010107"
+		}]
+	}
+}

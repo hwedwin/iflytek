@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>频繁操作模型配置</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/module-config.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/module-config.js"></script>
+	</head>
+	<body>
+		<div class="page-content-wrap">
+			<nav class="router">
+				<span class="router-title">频繁操作模型配置</span>
+			</nav>
+			<div class="content">
+				<span class="content-title">提醒方式</span>
+				<div class="grid tableWrap">
+					<table class="grid-table" cellspacing="0">
+			    		<thead>
+			    			<th class="tb-checkbox col-5">
+			    				<input id="selectAll" data-bind="events: {click: selectAll}, checked: allSelected" type="checkbox">
+			    			</th>
+			    			<th>序号</th>
+			    			<th>单位</th>
+			    			<th>操作人</th>
+			    			<th>手机号</th>
+			    			<th>内网邮箱</th>
+			    			<th>短信</th>
+			    			<th>邮箱</th>
+			    			<th>删除</th>
+			    		</thead>
+			    		<tbody id="gridList" data-bind="source: tableData" data-template="gridTemp">
+			    			<tr>
+			    				<td colspan="9">正在加载中...</td>
+			    			</tr>
+			    		</tbody>
+			    	</table>
+			    	<div    class="pagination"
+			    			data-role="pagination"
+				    		data-num-display-entries="2"
+				    		data-num-edge-entries="2"
+				    		data-bind="source: tableData"></div>
+				</div>
+				<div>
+					<div class="col-xs-12 saveWrap">
+						<input class="save-btn" data-bind="click: saveClick" type="button" value="保存">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script id="gridTemp" type="text/html">
+		    {{each $data as item index}}
+		    	<tr id="{{item.createUserId}}">
+		    		<td>
+		    			<input class="row-check" type="checkbox" data-bind="events: {click: selectItem},checked: checked">
+		    		</td>
+		    		<td data-bind="text: _index"></td>
+		    		<td>{{item.userDetail.company}}</td>
+		    		<td>{{item.userDetail.name}}</td>
+		    		<td>{{item.userDetail.phone}}</td>
+		    		<td>{{item.userDetail.email}}</td>
+		    		{{if item.email}}
+		    			<td><input name="smsChecked" data-bind="value: smsVal" type="checkbox" checked=""></td>
+		    		{{else}}
+		    			<td><input name="smsChecked" data-bind="value: smsVal" type="checkbox"></td>
+		    		{{/if}}
+		    		{{if item.phone}}
+		    			<td><input name="emailChecked" data-bind="value: emailVal" type="checkbox" checked=""></td>
+		    		{{else}}
+		    			<td><input name="emailChecked" data-bind="value: emailVal" type="checkbox"></td>
+		    		{{/if}}
+		    		<td class="delete">删除</td>
+		    	</tr>
+		    {{/each}}
+		</script>
+	</body>

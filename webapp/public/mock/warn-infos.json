@@ -1,0 +1,63 @@
+{
+	"flag": true,
+	"msg": "接口调用成功",
+	"result": {
+		"total": 77,
+		"data": [{
+			"id": "100015820001",
+			"value": "100015820001",
+			"theme": "人员查询情况监测1",
+			"time": "2017/01/26 18:16:15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "登录",
+			"optionId": "1001",
+			"exception": "偏差10%",
+			"operator": "孙老一"
+		},{
+			"id": "100015820002",
+			"value": "100015820002",
+			"theme": "人员查询情况监测2",
+			"time": "2017/01/26 18:16:15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "查询",
+			"optionId": "1002",
+			"exception": "偏差10%",
+			"operator": "孙老二"
+		},{
+			"id": "100015820003",
+			"value": "100015820003",
+			"theme": "人员查询情况监测3",
+			"time": "2017/01/26 18:16:15",
+			"system": "数据中心",
+			"systemId": "2003",
+			"optionType": "添加",
+			"optionId": "1003",
+			"exception": "偏差10%",
+			"operator": "孙老三"
+		},{
+			"id": "100015820004",
+			"value": "100015820004",
+			"theme": "人员查询情况监测4",
+			"time": "2017/01/26 18:16:15",
+			"system": "一站通",
+			"systemId": "2001",
+			"optionType": "修改",
+			"optionId": "1004",
+			"exception": "偏差10%",
+			"operator": "孙老四"
+		},{
+			"id": "100015820005",
+			"value": "100015820005",
+			"theme": "人员查询情况监测5",
+			"time": "2017/01/26 18:16:15",
+			"system": "网格化",
+			"systemId": "2002",
+			"optionType": "删除",
+			"optionId": "1005",
+			"exception": "偏差10%",
+			"operator": "孙老五"
+		}]
+	}
+}

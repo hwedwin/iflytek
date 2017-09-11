@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>安全审计平台</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<base target="iframe-content">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/index.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/index.js"></script>
+	</head>
+	<body>
+		<div class="page">
+			 <nav class="nav">
+			 	<ul class="top-nav-left">
+			 		<li class="logo"><img src="../public/img/logo.png"></li>
+			 		<li class="title"><img src="../public/img/title.png"></li>
+			 	</ul>
+			 	<ul class="top-nav-right">
+			 		<li><img src="../public/img/head-icon.png"></li>
+			 		<li class="user-name" data-bind="text: nickName"></li>
+			 		<li><div class="email-icon"><img class="info-number" src="../public/img/info-number.png"></div></li>
+			 		<li class="top-line">|</li>
+			 		<li class="logout" data-bind="click: logout">退出</li>
+			 	</ul>
+			 </nav>
+			 <div class="content-wrap">
+		        <div class="left-menu">
+		          <div  data-text-field="text"
+						data-url-field="value"
+			          	data-bind="source: menus"
+			          	data-checkboxes="false"
+			          	data-role="tree">
+		          </div>
+		        </div>
+		        <div class="content">
+		            <iframe id="iframe-content" name="iframe-content" class="iframe-content"
+		            		src="/views/list-warn.html" frameborder="0" scrolling="no"></iframe>
+		        </div>
+			</div>
+			<footer class="footer">
+				技术支持:科大讯飞股份有限公司
+			</footer>
+		</div>
+	</body>

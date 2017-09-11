@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>登录</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<base target="iframe-content">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/register.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/register.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<section id="content">
+				<form id="formWrap" action="">
+					<h1>Register Form</h1>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label><i class="required">*</i>用户名:</label>
+								</span>
+								<input  class="userName" name="userName"
+										data-role="textbox"
+										type="text" placeholder="用户名"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label>昵称:</label>
+								</span>
+								<input  id="nickName" class="nickName" name="nickName"
+										data-role="textbox"
+										type="text" placeholder="昵称"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label><i class="required">*</i>密码:</label>
+								</span>
+								<input  id="password" class="password" name="password"
+										data-role="textbox"
+										data-bind="value: password"
+										type="password" placeholder="密码"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label><i class="required">*</i>确认密码:</label>
+								</span>
+								<input  id="comfirm_password" class="comfirm_password" name="comfirm_password"
+										data-role="textbox"
+										data-bind="value: comfirm_password"
+										type="password" placeholder="确认密码"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label>公司:</label>
+								</span>
+								<input  class="company" name="company"
+										data-role="textbox"
+										type="text" placeholder="公司"/>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label>电话:</label>
+								</span>
+								<input  id="phone" class="phone" name="phone"
+										data-role="textbox"
+										type="phone" placeholder="电话"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<div class="form-control">
+								<span class="label">
+									<label>邮箱:</label>
+								</span>
+								<input  class="email" name="email"
+										data-role="textbox"
+										type="email" placeholder="邮箱"/>
+							</div>
+						</div>
+					</div>
+					<div>
+						<input data-bind="click: register" type="button" value="注册" />
+						<a href="javascript:void(null)" data-bind="click: goBack">返回</a>
+					</div>
+				</form>
+			</section>
+		</div>
+	</body>

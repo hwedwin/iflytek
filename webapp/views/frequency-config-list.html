@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>访问频率管理列表</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="../public/js/plugins/flyui/css/flyui-1.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" href="../public/css/common.css">
+		<link rel="stylesheet" href="../public/css/frequency-config-list.css">
+		<script src="/public/js/plugins/require.js" defer async="true" data-main="/public/js/apps/frequency-config-list.js"></script>
+	</head>
+	<body>
+		<div class="page-content-wrap">
+			<nav class="router">
+				<span class="router-title">访问频率管理列表</span>
+			</nav>
+			<div class="content">
+				<div class="grid tableWrap">
+					<table class="grid-table" cellspacing="0">
+						<thead class="table-head">
+			    			<th colspan="7">符合条件的频率管理列表</th>
+			    		</thead>
+			    		<thead>
+			    			<th>主题</th>
+			    			<th>业务系统</th>
+			    			<th>操作类型</th>
+			    			<th>数据范围</th>
+			    			<th>统计周期</th>
+			    			<th>统计阈值</th>
+			    			<th>备注</th>
+			    		</thead>
+			    		<tbody id="gridList" data-bind="source: tableData" data-template="gridTemp">
+			    			<tr>
+			    				<td colspan="7">正在加载中...</td>
+			    			</tr>
+			    		</tbody>
+			    	</table>
+			    	<div    class="pagination"
+			    			data-role="pagination"
+				    		data-num-display-entries="2"
+				    		data-num-edge-entries="2"
+				    		data-bind="source: tableData"></div>
+				</div>
+			</div>
+		</div>
+		<script id="gridTemp" type="text/html">
+		    {{each $data as item index}}
+		    	<tr>
+		    		<td data-bind="text: theme"></td>
+		    		<td data-bind="text: businessSystemValue"></td>
+		    		<td data-bind="text: optionTypeValue"></td>
+		    		<td data-bind="text: dataRange"></td>
+		    		<td data-bind="text: statisCycleValue"></td>
+		    		<td data-bind="text: statisValue"></td>
+		    		<td data-bind="text: remark"></td>
+		    	</tr>
+		    {{/each}}
+		</script>
+	</body>

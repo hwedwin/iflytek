@@ -1,0 +1,29 @@
+html,
+body {
+	background-color: #fff;
+}
+
+.title {
+	height: 30px;
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.formWrap {
+	margin-top: 30px;
+}
+
+.btnWrap {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.btnWrap .sure-btn {
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	background-color: #28C4A4;
+	color: #fff;
+}

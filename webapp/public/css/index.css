@@ -1,0 +1,106 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 80px;
+	background-color: #0BB7C5;
+	background: -webkit-linear-gradient(left, #0BB7C5, #0DD2C9);
+	background: -o-linear-gradient(left, #0BB7C5, #0DD2C9);
+    background: -moz-linear-gradient(left, #0BB7C5, #0DD2C9);
+	background: linear-gradient(left, #0BB7C5, #0DD2C9);
+	color: #fff;
+}
+
+.top-nav-left,
+.top-nav-right {
+	display: flex;
+	align-items: center;
+	margin: 0 100px;
+	height: 100%;
+}
+
+.user-info {
+	float: right;
+}
+
+.top-nav-right > li > img {
+	animation: translogo 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+/*logo旋转动画*/
+ @keyframes translogo{
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+.top-nav-left .title img,
+.top-nav-left .logo img {
+	margin: 0 4px;
+}
+
+.top-nav-right li {
+	margin: 0 6px;
+}
+
+.left-menu {
+	position: relative;
+	bottom: 0;
+	padding: 10px;
+	width: 230px;
+	border-right: 1px solid #c5c4c4;
+}
+
+.content-wrap {
+	display: flex;
+	flex-direction: row;
+	margin: 25px 110px;
+	height: 80%;
+	border: 1px solid #c3c0c0;
+	border-radius: 1px;
+	background-color: #fff;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+}
+
+.iframe-content {
+	width: 100%;
+	height: 100%;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	color: #666;
+}
+
+.email-icon {
+	width: 21px;
+	height: 14px;
+	background: url(/public/img/email-icon.png) no-repeat;
+}
+
+.info-number {
+	position: relative;
+	top: -18px;
+	right: -14px;
+}
+
+.top-nav-right .top-line {
+	margin-left: 20px;
+}
+
+.top-nav-right .logout {
+	font-size: 14px;
+}
+
+.left-menu .treeview .in {
+	border-radius: 1px;
+}

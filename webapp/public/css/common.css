@@ -1,0 +1,198 @@
+html,
+body,
+div,
+p,
+input,
+button,
+span,
+textarea,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a:hover,
+a:visited,
+a:focus,
+a:active {
+    outline: none;
+    text-decoration-line: none;
+}
+
+li,
+input,
+textarea {
+    outline:none;
+}
+
+textarea {
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(205, 209, 218, 0.77);
+    border-radius: 3px;
+    resize: none;
+    font-size: 14px;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: " ";
+    font-size: 0;
+}
+
+/*确保只有主页有滚动条，而里面的iframe没有滚动条*/
+.page {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    min-height: 750px;
+}
+
+.page-content-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.router {
+	height: 55px;
+	border-bottom: 1.4px solid #c5c4c4;
+	color: #0BB7C5;
+}
+
+.router-title {
+	display: inline-block;
+	margin-left: 10px;
+	width: 100px;
+    height: 56px;
+    border-bottom: 3px solid #0BB7C5;
+	line-height: 55px;
+	text-align: center;
+    font-size: 16px;
+}
+
+.form-control .label .required {
+    margin-right: 3px;
+}
+
+/*重写flyui的样式*/
+.list .state-focused,
+.list-optionlabel.state-focused {
+	border-style: none;
+}
+
+.top .state-selected,
+.state-selected,
+.state-selected:link {
+    border-color: #FF9D48;
+	background-color: #FF9D48;
+	color: #fff;
+}
+
+.top .state-selected,
+.top .state-selected:link,
+.mid .state-selected,
+.mid .state-selected:link,
+.bot .state-selected,
+.bot .state-selected:link {
+    border-color: #FF9D48;
+    background-color: #FF9D48;
+}
+
+.top a,
+.mid a,
+.bot a {
+	color: #000;
+}
+
+.number .btn-primary {
+	border: 1px solid #0BB7C5;
+	background-color: #0BB7C5;
+}
+
+.dialog-footer button.dialog-autofocus,
+.dialog-footer button.dialog-autofocus:focus {
+    border-color: #0CC5C7;
+    background-color: #0CC5C7;
+    outline:none;
+}
+
+.pagination {
+    padding: 10px;
+}
+
+/* 单选框 多选框 */
+.multisel-wrap,
+.siglesel-wrap {
+    display: block;
+    height: 30px;
+    zoom: 1;
+}
+
+.multisel-wrap:after,
+.siglesel-wrap:after {
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: " ";
+    font-size: 0;
+}
+
+.multisel-wrap span,
+.siglesel-wrap span,
+.multisel-wrap .check-all,
+.siglesel-wrap .check-all {
+    cursor: pointer;
+}
+
+.multisel-wrap .ico,
+.siglesel-wrap .ico {
+    display: inline-block;
+    margin-top: 8px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icon-sel.png);
+    vertical-align: top;
+}
+
+.multisel-wrap span,
+.siglesel-wrap span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0;
+}
+
+.multisel-wrap span .ico-sigle,
+.siglesel-wrap span .ico-sigle {
+    background-position: 0 -28px;
+}
+
+.multisel-wrap span.checked .ico {
+    background-position: 0 -70px;
+}
+
+.siglesel-wrap span.checked .ico {
+    background-position: 0 -42px;
+}
+
+.multisel-wrap .ico + span,
+.siglesel-wrap .ico + span {
+    margin-top: 8px;
+    padding-left: 10px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+}
