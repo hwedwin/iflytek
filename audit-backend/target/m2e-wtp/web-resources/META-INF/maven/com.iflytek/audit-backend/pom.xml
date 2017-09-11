@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.iflytek</groupId>
+	<artifactId>audit-backend</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>audit-backend Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<!-- 版本依赖 -->
+	<properties>
+		<spring.version>4.1.3.RELEASE</spring.version>
+		<slf4j.version>1.7.7</slf4j.version>
+		<jstl.version>1.2.2</jstl.version>
+		<mysql.version>5.1.38</mysql.version>
+		<dbcp.version>2.1.1</dbcp.version>
+		<fileupload.version>1.3.2</fileupload.version>
+		<hibernate.version>4.3.8.Final</hibernate.version>
+		<fastjson.version>1.2.24</fastjson.version>
+		<jackson.version>2.8.6</jackson.version>
+		<junit.version>4.11</junit.version>
+		<cors-tomcat.version>1.7.1</cors-tomcat.version>
+		<cors-jetty.version>9.3.0.M2</cors-jetty.version>
+		<jetty.version>7.6.14.v20131031</jetty.version>
+		<port>8080</port>
+		<commons-lang3.version>3.3.2</commons-lang3.version>
+	</properties>
+
+	<!-- 管理所有spring相关jar包的版本号 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<!-- jstl标签，如果使用jsp页面，引进该jar包 -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.servlet.jsp.jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+		<!--mysql连接数据库 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<!--配置第一个之后会自动导入一些spring mvc相关的依赖包，但是有可能我们需要包的没有被自动导入 因此，之后的第二个及以后是根据项目需要添加需要导入的spring 
+			mvc相关的包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<!--这个包不会随spring-webmvc导入，这个包作用是管理Hibernate资源 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<!--这个也不会随spring-webmvc导入，作用是为spring-aop提供支持 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		<!--Apache Commons dbcp 2.1.1 Apache提供的一些组件，dbcp配置数据源时需要使用 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>${dbcp.version}</version>
+		</dependency>
+		<!--支持SpringMVC文件上传功能 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${fileupload.version}</version>
+		</dependency>
+		<!--Hibernate 4.3.8.Final -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- FastJson 1.2.24 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+		<!-- jackson-core Spring MVC配置RequestMappingHandlerAdapter时用到了 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		<!-- cors tomcat ajax -->
+		<dependency>
+			<groupId>com.thetransactioncompany</groupId>
+			<artifactId>cors-filter</artifactId>
+			<version>${cors-tomcat.version}</version>
+		</dependency>
+		<!-- cors jetty ajax -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlets</artifactId>
+			<version>${cors-jetty.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- jetty插件 -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
+				<configuration>
+					<!-- 设置端口 -->
+					<connectors>
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>${port}</port>
+						</connector>
+					</connectors>
+					<!-- 设置contextPath -->
+					<webAppConfig>
+						<contextPath>/${project.artifactId}</contextPath>
+					</webAppConfig>
+					<!-- 设置编码格式 -->
+					<systemProperties>
+						<systemProperty>
+							<name>org.mortbay.util.URI.charset</name>
+							<value>UTF-8</value>
+						</systemProperty>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>audit-backend</finalName>
+	</build>
+</project>
